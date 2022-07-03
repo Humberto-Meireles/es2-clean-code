@@ -9,39 +9,26 @@ def printsQuizIntro():
 
 printsQuizIntro()
 
-
-call = int(input("=> Did you call the victim? Yes [1] , No [0]:  "))
+  
+calledVictim = int(input("=> Did you call the victim? Yes [1] , No [0]:  "))
 print()
 
-
-
-scene = int(input("=> Have you been in the crime scene? Yes [1] , No [0]:  "))
+haveBeenScene = int(input("=> Have you been in the crime scene? Yes [1] , No [0]:  "))
 print()
 
-
-
-live = int(input("=> Do you live near the victim's home? Yes [1] , No [0]:  "))
+liveNear = int(input("=> Do you live near the victim's home? Yes [1] , No [0]:  "))
 print()
 
-
-
-owe = int(input("=> Did you owe money or other thing to the victim? Yes [1] , No [0]:  "))
+oweMoney = int(input("=> Did you owe money or other thing to the victim? Yes [1] , No [0]:  "))
 print()
 
-
-
-work = int(input("=> Have you worked with the victim? Yes [1] , No [0]:  "))
+workedWith = int(input("=> Have you worked with the victim? Yes [1] , No [0]:  "))
 print()
-
-
 
 print(" --------------------------------------------- ")
 
 
-
-
-classification = call + scene + live + owe + work
-
+classification = calledVictim + haveBeenScene + liveNear + oweMoney + workedWith
 print("=> Classification: ", classification)
 
 
