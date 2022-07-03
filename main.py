@@ -7,9 +7,6 @@ def printsQuizIntro():
 	print()
 
 
-printsQuizIntro()
-
-
 questions = {
   "calledVictim": "",
   "haveBeenScene": "",
@@ -34,23 +31,20 @@ def quiz():
 	return questions["calledVictim"] + questions["haveBeenScene"] + questions["liveNear"] + questions["oweMoney"] + questions["workedWith"]
 
 
-
-
-classification = quiz ()
-print("=> Classification: ", classification)
-print(" --------------------------------------------- ")
-
-
-
-if(classification < 2):
-	print("=> The person is INOCENT.")
-else:
-	if(classification == 2):
-		print("=> The person is SUSPECT.")
-	elif(classification > 2 and classification < 5):
-		print("=> The suspect is an ACCOMPLICE in the crime.")
+def main():
+	yesAnswers = quiz()
+	print("=> Number of 'Yes' answers: ", yesAnswers)
+	print(" --------------------------------------------- ")
+	if(yesAnswers < 2):
+		print("=> The person is INOCENT.")
 	else:
-		print("=> The suspect is the MURDERER.")
+		if(yesAnswers == 2):
+			print("=> The person is SUSPECT.")
+		elif(yesAnswers > 2 and yesAnswers < 5):
+			print("=> The suspect is an ACCOMPLICE in the crime.")
+		else:
+			print("=> The suspect is the MURDERER.")
 
 
-print(" --------------------------------------------- ")
+printsQuizIntro()
+main()
