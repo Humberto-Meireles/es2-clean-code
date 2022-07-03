@@ -9,27 +9,36 @@ def printsQuizIntro():
 
 printsQuizIntro()
 
-  
-calledVictim = int(input("=> Did you call the victim? Yes [1] , No [0]:  "))
-print()
 
-haveBeenScene = int(input("=> Have you been in the crime scene? Yes [1] , No [0]:  "))
-print()
-
-liveNear = int(input("=> Do you live near the victim's home? Yes [1] , No [0]:  "))
-print()
-
-oweMoney = int(input("=> Did you owe money or other thing to the victim? Yes [1] , No [0]:  "))
-print()
-
-workedWith = int(input("=> Have you worked with the victim? Yes [1] , No [0]:  "))
-print()
-
-print(" --------------------------------------------- ")
+questions = {
+  "calledVictim": "",
+  "haveBeenScene": "",
+  "liveNear": "",
+  "oweMoney": "",
+  "workedWith": "",
+}
 
 
-classification = calledVictim + haveBeenScene + liveNear + oweMoney + workedWith
+def question (key, statement):
+	questions[key] = int(input(statement))
+	print()
+
+
+def quiz():
+	question("calledVictim", "=> Did you call the victim? Yes [1] , No [0]:  ")
+	question("haveBeenScene", "=> Have you been in the crime scene? Yes [1] , No [0]:  ")
+	question("liveNear","=> Do you live near the victim's home? Yes [1] , No [0]:  ")
+	question("oweMoney", "=> Did you owe money or other thing to the victim? Yes [1] , No [0]:  ")
+	question("workedWith", "=> Have you worked with the victim? Yes [1] , No [0]:  ")
+
+	return questions["calledVictim"] + questions["haveBeenScene"] + questions["liveNear"] + questions["oweMoney"] + questions["workedWith"]
+
+
+
+
+classification = quiz ()
 print("=> Classification: ", classification)
+print(" --------------------------------------------- ")
 
 
 
