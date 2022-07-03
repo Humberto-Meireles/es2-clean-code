@@ -1,11 +1,13 @@
-print()
+def printsQuizIntro():
+	print()
+	print(" ----------- ACME DETECTIVE AGENCY ----------- ")
+	print(" -------- Answer the questions below --------- ")
+	print(" ---- Yes: press [1]   |   No: press [0] ----- ")
+	print(" --------------------------------------------- ")
+	print()
 
-print(" ----------- ACME DETECTIVE AGENCY ----------- ")
-print(" -------- Answer the questions below --------- ")
-print(" ---- Yes: press [1]   |   No: press [0] ----- ")
-print(" --------------------------------------------- ")
-print()
 
+printsQuizIntro()
 
 
 call = int(input("=> Did you call the victim? Yes [1] , No [0]:  "))
